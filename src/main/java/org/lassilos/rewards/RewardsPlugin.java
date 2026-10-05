@@ -107,28 +107,16 @@ public final class RewardsPlugin extends JavaPlugin {
     }
 
     private int upgradedTableLevel(Enchantment enchantment, int generatedLevel) {
-        if (enchantment == Enchantment.SHARPNESS && generatedLevel == enchantment.getMaxLevel()) {
-            return 6;
-        }
-        if (enchantment == Enchantment.EFFICIENCY && generatedLevel == enchantment.getMaxLevel()) {
-            return 6;
-        }
-        if (enchantment == Enchantment.UNBREAKING && generatedLevel == enchantment.getMaxLevel()) {
-            return 4;
-        }
-        if (enchantment == Enchantment.PROTECTION && generatedLevel == enchantment.getMaxLevel()) {
-            return 5;
+        if (enchantment.getMaxLevel() > 1 && generatedLevel == enchantment.getMaxLevel()) {
+            return generatedLevel + 1;
         }
         return generatedLevel;
     }
 
     private List<Enchantment> supportedHigherEnchantments() {
-        return List.of(
-                Enchantment.SHARPNESS,
-                Enchantment.EFFICIENCY,
-                Enchantment.UNBREAKING,
-                Enchantment.PROTECTION
-        );
+        return java.util.Arrays.stream(Enchantment.values())
+                .filter(enchantment -> enchantment.getMaxLevel() > 1)
+                .toList();
     }
 
     private int getItemEnchantmentLevel(ItemStack item, Enchantment enchantment) {

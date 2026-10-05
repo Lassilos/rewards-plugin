@@ -20,9 +20,9 @@ shop:
       equipment-slot: 15
       equipment-name: "&bCustom Equipment"
     category:
-      back-slot: 26
+      back-slot: 53
     books:
-      size: 27
+      size: 54
       title: "&2Enchanted Books"
     equipment:
       size: 27
@@ -84,6 +84,396 @@ shop:
         name: "Sharpness VI"
         enchants:
           - SHARPNESS:6
+    fire-protection-5:
+      name: "Fire Protection V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Fire Protection IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:FIRE_PROTECTION:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Fire Protection V"
+        enchants:
+          - FIRE_PROTECTION:5
+    feather-falling-5:
+      name: "Feather Falling V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Feather Falling IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:FEATHER_FALLING:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Feather Falling V"
+        enchants:
+          - FEATHER_FALLING:5
+    blast-protection-5:
+      name: "Blast Protection V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Blast Protection IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:BLAST_PROTECTION:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Blast Protection V"
+        enchants:
+          - BLAST_PROTECTION:5
+    projectile-protection-5:
+      name: "Projectile Protection V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Projectile Protection IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:PROJECTILE_PROTECTION:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Projectile Protection V"
+        enchants:
+          - PROJECTILE_PROTECTION:5
+    respiration-4:
+      name: "Respiration IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Respiration III)"
+      required-items:
+        - ENCHANTED_BOOK:1:RESPIRATION:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Respiration IV"
+        enchants:
+          - RESPIRATION:4
+    depth-strider-4:
+      name: "Depth Strider IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Depth Strider III)"
+      required-items:
+        - ENCHANTED_BOOK:1:DEPTH_STRIDER:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Depth Strider IV"
+        enchants:
+          - DEPTH_STRIDER:4
+    frost-walker-3:
+      name: "Frost Walker III"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Frost Walker II)"
+      required-items:
+        - ENCHANTED_BOOK:1:FROST_WALKER:2
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Frost Walker III"
+        enchants:
+          - FROST_WALKER:3
+    smite-6:
+      name: "Smite VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Smite V)"
+      required-items:
+        - ENCHANTED_BOOK:1:SMITE:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Smite VI"
+        enchants:
+          - SMITE:6
+    bane-of-arthropods-6:
+      name: "Bane of Arthropods VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Bane of Arthropods V)"
+      required-items:
+        - ENCHANTED_BOOK:1:BANE_OF_ARTHROPODS:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Bane of Arthropods VI"
+        enchants:
+          - BANE_OF_ARTHROPODS:6
+    knockback-3:
+      name: "Knockback III"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Knockback II)"
+      required-items:
+        - ENCHANTED_BOOK:1:KNOCKBACK:2
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Knockback III"
+        enchants:
+          - KNOCKBACK:3
+    fire-aspect-3:
+      name: "Fire Aspect III"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Fire Aspect II)"
+      required-items:
+        - ENCHANTED_BOOK:1:FIRE_ASPECT:2
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Fire Aspect III"
+        enchants:
+          - FIRE_ASPECT:3
+    looting-4:
+      name: "Looting IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Looting III)"
+      required-items:
+        - ENCHANTED_BOOK:1:LOOTING:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Looting IV"
+        enchants:
+          - LOOTING:4
+    sweeping-edge-4:
+      name: "Sweeping Edge IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Sweeping Edge III)"
+      required-items:
+        - ENCHANTED_BOOK:1:SWEEPING_EDGE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Sweeping Edge IV"
+        enchants:
+          - SWEEPING_EDGE:4
+    fortune-4:
+      name: "Fortune IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Fortune III)"
+      required-items:
+        - ENCHANTED_BOOK:1:FORTUNE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Fortune IV"
+        enchants:
+          - FORTUNE:4
+    power-6:
+      name: "Power VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Power V)"
+      required-items:
+        - ENCHANTED_BOOK:1:POWER:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Power VI"
+        enchants:
+          - POWER:6
+    punch-3:
+      name: "Punch III"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Punch II)"
+      required-items:
+        - ENCHANTED_BOOK:1:PUNCH:2
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Punch III"
+        enchants:
+          - PUNCH:3
+    luck-of-the-sea-4:
+      name: "Luck of the Sea IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Luck of the Sea III)"
+      required-items:
+        - ENCHANTED_BOOK:1:LUCK_OF_THE_SEA:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Luck of the Sea IV"
+        enchants:
+          - LUCK_OF_THE_SEA:4
+    lure-4:
+      name: "Lure IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Lure III)"
+      required-items:
+        - ENCHANTED_BOOK:1:LURE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Lure IV"
+        enchants:
+          - LURE:4
+    loyalty-4:
+      name: "Loyalty IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Loyalty III)"
+      required-items:
+        - ENCHANTED_BOOK:1:LOYALTY:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Loyalty IV"
+        enchants:
+          - LOYALTY:4
+    impaling-6:
+      name: "Impaling VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Impaling V)"
+      required-items:
+        - ENCHANTED_BOOK:1:IMPALING:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Impaling VI"
+        enchants:
+          - IMPALING:6
+    riptide-4:
+      name: "Riptide IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Riptide III)"
+      required-items:
+        - ENCHANTED_BOOK:1:RIPTIDE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Riptide IV"
+        enchants:
+          - RIPTIDE:4
+    quick-charge-4:
+      name: "Quick Charge IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Quick Charge III)"
+      required-items:
+        - ENCHANTED_BOOK:1:QUICK_CHARGE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Quick Charge IV"
+        enchants:
+          - QUICK_CHARGE:4
+    piercing-5:
+      name: "Piercing V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Piercing IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:PIERCING:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Piercing V"
+        enchants:
+          - PIERCING:5
+    thorns-4:
+      name: "Thorns IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Thorns III)"
+      required-items:
+        - ENCHANTED_BOOK:1:THORNS:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Thorns IV"
+        enchants:
+          - THORNS:4
+    soul-speed-4:
+      name: "Soul Speed IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Soul Speed III)"
+      required-items:
+        - ENCHANTED_BOOK:1:SOUL_SPEED:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Soul Speed IV"
+        enchants:
+          - SOUL_SPEED:4
+    swift-sneak-4:
+      name: "Swift Sneak IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Swift Sneak III)"
+      required-items:
+        - ENCHANTED_BOOK:1:SWIFT_SNEAK:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Swift Sneak IV"
+        enchants:
+          - SWIFT_SNEAK:4
+    lunge-4:
+      name: "Lunge IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Lunge III)"
+      required-items:
+        - ENCHANTED_BOOK:1:LUNGE:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Lunge IV"
+        enchants:
+          - LUNGE:4
+    density-6:
+      name: "Density VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Density V)"
+      required-items:
+        - ENCHANTED_BOOK:1:DENSITY:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Density VI"
+        enchants:
+          - DENSITY:6
+    breach-5:
+      name: "Breach V"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Breach IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:BREACH:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Breach V"
+        enchants:
+          - BREACH:5
+    wind-burst-4:
+      name: "Wind Burst IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Wind Burst III)"
+      required-items:
+        - ENCHANTED_BOOK:1:WIND_BURST:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Wind Burst IV"
+        enchants:
+          - WIND_BURST:4
     night-vision-helmet:
       slot: 15
       name: "Night Vision Helmet"

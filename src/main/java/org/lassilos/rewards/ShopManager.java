@@ -69,7 +69,7 @@ final class ShopManager implements Listener {
             }
             return;
         }
-        if (event.getRawSlot() == configuredSlot("shop.ui.category.back-slot", 26)) {
+        if (event.getRawSlot() == backSlot(event.getView().getTopInventory().getSize())) {
             openMain(player);
             return;
         }
@@ -88,32 +88,54 @@ final class ShopManager implements Listener {
             inventory.setItem(slot, filler);
         }
         List<String> paths = categoryPaths(equipment);
-        int startSlot = categoryStartSlot(equipment, paths.size());
+        List<Integer> slots = categorySlots(equipment, paths.size(), inventory.getSize());
         for (int index = 0; index < paths.size(); index++) {
-            int slot = startSlot + index;
-            if (slot < inventory.getSize()) {
-                inventory.setItem(slot, shopIcon(paths.get(index)));
+            if (index < slots.size()) {
+                inventory.setItem(slots.get(index), shopIcon(paths.get(index)));
             }
         }
-        inventory.setItem(configuredSlot("shop.ui.category.back-slot", 26),
+        inventory.setItem(backSlot(inventory.getSize()),
                 namedItem(Material.ARROW, ChatColor.YELLOW + "Back"));
         player.openInventory(inventory);
     }
 
     private String findItemPathBySlot(int slot, boolean equipment) {
         List<String> paths = categoryPaths(equipment);
-        int index = slot - categoryStartSlot(equipment, paths.size());
+        List<Integer> slots = categorySlots(equipment, paths.size(),
+                inventorySize(equipment ? "shop.ui.equipment.size" : "shop.ui.books.size", 27));
+        int index = slots.indexOf(slot);
         if (index >= 0 && index < paths.size()) {
             return paths.get(index);
         }
         return null;
     }
 
-    private int categoryStartSlot(boolean equipment, int itemCount) {
+    private List<Integer> categorySlots(boolean equipment, int itemCount, int inventorySize) {
+        List<Integer> slots = new ArrayList<>();
         String section = equipment ? "shop.ui.equipment" : "shop.ui.books";
         int size = inventorySize(section + ".size", 27);
         int rowStart = size / 2 - 4;
-        return rowStart + Math.max(0, (9 - Math.min(itemCount, 9)) / 2);
+        if (!equipment) {
+            for (int slot = 0; slot < inventorySize; slot++) {
+                int column = slot % 9;
+                if (column != 0 && column != 8 && slot != backSlot(inventorySize)) {
+                    slots.add(slot);
+                }
+            }
+            return slots;
+        }
+        int start = rowStart + Math.max(0, (9 - Math.min(itemCount, 9)) / 2);
+        for (int index = 0; index < itemCount && start + index < inventorySize; index++) {
+            int slot = start + index;
+            if (slot % 9 != 0 && slot % 9 != 8 && slot != backSlot(inventorySize)) {
+                slots.add(slot);
+            }
+        }
+        return slots;
+    }
+
+    private int backSlot(int inventorySize) {
+        return inventorySize - 1;
     }
 
     private List<String> categoryPaths(boolean equipment) {

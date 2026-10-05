@@ -1,0 +1,158 @@
+advancement-rewards:
+  task: 10
+  goal: 25
+  challenge: 100
+  exceptions:
+    end/kill_dragon: 500
+    nether/summon_wither: 300
+
+shop:
+  ui:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: " "
+    main:
+      size: 27
+      title: "&2Rewards Shop"
+      books-slot: 11
+      books-name: "&dEnchanted Books"
+      player-slot: 4
+      equipment-slot: 15
+      equipment-name: "&bCustom Equipment"
+    category:
+      back-slot: 26
+    books:
+      size: 27
+      title: "&2Enchanted Books"
+    equipment:
+      size: 27
+      title: "&2Custom Equipment"
+  items:
+    efficiency-6:
+      slot: 10
+      name: "Efficiency VI"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Efficiency V)"
+      required-items:
+        - ENCHANTED_BOOK:1:EFFICIENCY:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Efficiency VI"
+        enchants:
+          - EFFICIENCY:6
+    unbreaking-4:
+      slot: 11
+      name: "Unbreaking IV"
+      icon: ENCHANTED_BOOK
+      points: 100
+      requirements:
+        - "1x Enchanted Book (Unbreaking III)"
+      required-items:
+        - ENCHANTED_BOOK:1:UNBREAKING:3
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Unbreaking IV"
+        enchants:
+          - UNBREAKING:4
+    protection-5:
+      slot: 12
+      name: "Protection V"
+      icon: ENCHANTED_BOOK
+      points: 120
+      requirements:
+        - "1x Enchanted Book (Protection IV)"
+      required-items:
+        - ENCHANTED_BOOK:1:PROTECTION:4
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Protection V"
+        enchants:
+          - PROTECTION:5
+    sharpness-6:
+      slot: 13
+      name: "Sharpness VI"
+      icon: ENCHANTED_BOOK
+      points: 120
+      requirements:
+        - "1x Enchanted Book (Sharpness V)"
+      required-items:
+        - ENCHANTED_BOOK:1:SHARPNESS:5
+      reward:
+        material: ENCHANTED_BOOK
+        name: "Sharpness VI"
+        enchants:
+          - SHARPNESS:6
+    night-vision-helmet:
+      slot: 15
+      name: "Night Vision Helmet"
+      icon: NETHERITE_HELMET
+      points: 80
+      requirements:
+        - "1x Netherite Helmet"
+      required-items:
+        - NETHERITE_HELMET:1
+      required-potions:
+        - NIGHT_VISION:1
+      reward:
+        material: NETHERITE_HELMET
+        name: "Night Vision Helmet"
+        custom-id: night-vision-helmet
+        effect:
+          type: NIGHT_VISION
+          amplifier: 0
+    jump-boots:
+      slot: 16
+      name: "Jump Boost Boots"
+      icon: NETHERITE_BOOTS
+      points: 80
+      requirements:
+        - "1x Netherite Boots"
+      required-items:
+        - NETHERITE_BOOTS:1
+      required-potions:
+        - LEAPING:1
+      reward:
+        material: NETHERITE_BOOTS
+        name: "Jump Boost Boots"
+        custom-id: jump-boots
+        effect:
+          type: JUMP_BOOST
+          amplifier: 1
+    speed-leggings:
+      slot: 17
+      name: "Speed Leggings"
+      icon: NETHERITE_LEGGINGS
+      points: 80
+      requirements:
+        - "1x Netherite Leggings"
+      required-items:
+        - NETHERITE_LEGGINGS:1
+      required-potions:
+        - SWIFTNESS:1
+      reward:
+        material: NETHERITE_LEGGINGS
+        name: "Speed Leggings"
+        custom-id: speed-leggings
+        effect:
+          type: SPEED
+          amplifier: 0
+    elytra-chestplate:
+      slot: 22
+      name: "Elytra Chestplate"
+      icon: NETHERITE_CHESTPLATE
+      points: 200
+      requirements:
+        - "1x Netherite Chestplate"
+        - "1x Elytra"
+      required-items:
+        - NETHERITE_CHESTPLATE:1
+        - ELYTRA:1
+      reward:
+        material: NETHERITE_CHESTPLATE
+        name: "Elytra Chestplate"
+        custom-id: elytra-chestplate
+        glider: true
+        lore:
+          - "Can be used as an elytra"

@@ -1,0 +1,25 @@
+name: advancement-rewards
+version: '${version}'
+
+main: org.lassilos.rewards.RewardsPlugin
+api-version: '26.3'
+load: POSTWORLD
+commands:
+  points:
+    description: Displays your or another player's point balance
+    usage: /points [player]
+  points-shop:
+    description: Opens the rewards shop
+    usage: /points-shop
+  points-add:
+    description: Gives a player points for an event
+    usage: /points-add <player> <amount>
+    permission: advancement-rewards.givepoints
+  points-set:
+    description: Sets a player's point balance
+    usage: /points-set <player> <amount>
+    permission: advancement-rewards.givepoints
+permissions:
+  advancement-rewards.givepoints:
+    description: Allows giving players points
+    default: op

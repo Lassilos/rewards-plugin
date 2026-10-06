@@ -89,7 +89,16 @@ public final class RewardsPlugin extends JavaPlugin {
                 boolean changed = false;
                 for (Enchantment enchantment : supportedHigherEnchantments()) {
                     int resultLevel = getItemEnchantmentLevel(result, enchantment);
-                    if (resultLevel != enchantment.getMaxLevel()
+                    int storedLevel = Math.max(storedEnchantmentLevel(first, enchantment),
+                            storedEnchantmentLevel(second, enchantment));
+                    if (storedLevel > enchantment.getMaxLevel() && resultLevel < storedLevel) {
+                        setItemEnchantmentLevel(resultMeta, enchantment, storedLevel);
+                        changed = true;
+                        continue;
+                    }
+                    if (first.getItemMeta() instanceof EnchantmentStorageMeta
+                            || second.getItemMeta() instanceof EnchantmentStorageMeta
+                            || resultLevel != enchantment.getMaxLevel()
                             || getItemEnchantmentLevel(first, enchantment) <= 0
                             && getItemEnchantmentLevel(second, enchantment) <= 0) {
                         continue;
@@ -125,6 +134,14 @@ public final class RewardsPlugin extends JavaPlugin {
             return storedMeta.getStoredEnchantLevel(enchantment);
         }
         return item.getEnchantmentLevel(enchantment);
+    }
+
+    private int storedEnchantmentLevel(ItemStack item, Enchantment enchantment) {
+        ItemMeta meta = item.getItemMeta();
+        if (meta instanceof EnchantmentStorageMeta storedMeta) {
+            return storedMeta.getStoredEnchantLevel(enchantment);
+        }
+        return 0;
     }
 
     private void setItemEnchantmentLevel(ItemMeta meta, Enchantment enchantment, int level) {
